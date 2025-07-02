@@ -1,10 +1,19 @@
 const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
 const cors = require('cors');
+
+const todoRoutes = require('./routes/todoRoutes'); // ✅ IMPORT THIS
+
 const app = express();
+app.use(cors());
+app.use(express.json());
 
-app.use(cors());  // This allows your frontend to talk to backend
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
-// ...other backend setup code like routes, DB connection, etc.
+app.use('/api/todos', todoRoutes); // ✅ USE THE ROUTES HERE
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
