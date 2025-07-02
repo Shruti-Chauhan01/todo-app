@@ -1,0 +1,169 @@
+/* Reset and base */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+/* Container */
+
+.app-container {
+  background-color: white;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Title */
+
+.app-title {
+  text-align: center;
+  color: #ff6f91;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+/* TodoInput */
+
+.todo-input-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ff6f91;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #845ec2;
+  box-shadow: 0 0 5px #845ec2;
+}
+
+.todo-add-button {
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  padding: 0 1.25rem;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.todo-add-button:hover {
+  background-color: #d14a6f;
+}
+
+/* TodoList */
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Empty list message */
+
+.empty-list-msg {
+  font-style: italic;
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* TodoItem */
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffe0f0;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.85rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 111, 145, 0.25);
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item:hover {
+  background-color: #ffb7c3;
+}
+
+/* Completed task style */
+
+.todo-item.completed .todo-task {
+  text-decoration: line-through;
+  color: #a37b96;
+  font-style: italic;
+}
+
+/* Task text */
+
+.todo-task {
+  font-size: 1.1rem;
+  user-select: none;
+  flex-grow: 1;
+}
+
+/* Delete button */
+
+.todo-delete-button {
+  background: #ff6f91;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.todo-delete-button:hover {
+  background-color: #d14a6f;
+}
+
+/* Responsive */
+
+@media (max-width: 520px) {
+  .app-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .app-title {
+    font-size: 1.8rem;
+  }
+
+  .todo-input-form {
+    flex-direction: column;
+  }
+
+  .todo-add-button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
