@@ -116,6 +116,6 @@ Thank you for checking out my MERN To-Do App! Hope it helps you learn or organiz
 ## 📫 Contact Me
 
 - Email: shrutichauhan0086@gmail.com 
-- LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/shruti-chauhan-35b082338/))
+- LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/shruti-chauhan-35b082338/)
 
 ---
